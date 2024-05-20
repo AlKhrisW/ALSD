@@ -1,4 +1,4 @@
-package jobsheet6;
+package minggu5;
 
 public class HotelService {
     Hotel rooms[] = new Hotel[5];

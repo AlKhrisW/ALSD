@@ -1,4 +1,4 @@
-package jobsheet6;
+package minggu5;
 
 public class Hotel {
     String nama, kota;
