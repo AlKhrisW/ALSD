@@ -1,8 +1,6 @@
 // 03_ALdoKhrisna WIjaya
 // SIB1D
 
-package uts_aldo.khrisna.wijaya;
-
 public class ATK {
     String namaBarang;
     int kode, stok, hargaSatuan, terjual;

@@ -1,5 +1,3 @@
-package uts_aldo.khrisna.wijaya;
-
 import java.util.Scanner;
 
 public class ATKMain {
@@ -8,7 +6,6 @@ public class ATKMain {
         Scanner s = new Scanner(System.in);
         MethodATK t = new MethodATK();
         int menu;
-        char pilih;
         
         do {
             System.out.println("");
@@ -68,5 +65,7 @@ public class ATKMain {
                     break;
             }
         } while (menu != 6);
+        sc.close();
+        s.close();
     }
 }

@@ -1,5 +1,3 @@
-package uts_aldo.khrisna.wijaya;
-
 public class MethodATK {
     ATK data[] = new ATK[3];
     int index;
