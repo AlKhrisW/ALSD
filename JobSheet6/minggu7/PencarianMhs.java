@@ -1,6 +1,5 @@
 package minggu7;
 
-import minggu7.Mahasiswa;
 
 public class PencarianMhs {
     Mahasiswa listMhs[];
