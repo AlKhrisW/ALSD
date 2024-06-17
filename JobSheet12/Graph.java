@@ -40,11 +40,8 @@ public class Graph {
         System.out.println("degree vertex " + source + " : " + (totalIn + totalOut));
     }
     public void removeEdge(int source, int destination) throws Exception {
-        for (int i = 0; i < vertex; i++) {
-            if (i == destination) {
-                list[source].remove(destination);
-            }
-        }
+        list[source].remove(destination);
+        list[destination].remove(source);
     }
     public void removeAllEdge() {
         for (int i = 0; i < vertex; i++) {
