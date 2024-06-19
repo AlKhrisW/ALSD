@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class ListMahasiswa {
@@ -26,6 +28,18 @@ public class ListMahasiswa {
         }
         return -1;
     }
+    int binarySearch(String nim) {
+        Collections.sort(mahasiswas);
+        Mahasiswa key = new Mahasiswa(nim, "", "");
+        int i = Collections.binarySearch(mahasiswas, key);
+        return i;
+    }
+    void sortASC() {
+        Collections.sort(mahasiswas, Comparator.naturalOrder());
+    }
+    void sortDESC() {
+        Collections.sort(mahasiswas, Comparator.reverseOrder());
+    }
     public static void main(String[] args) {
         ListMahasiswa lm = new ListMahasiswa();
         Mahasiswa m = new Mahasiswa("201234", "Noureen", "021xx1");
@@ -36,8 +50,15 @@ public class ListMahasiswa {
         // menampiljan list mahasiswa
         lm.tampil();
         // update mahasiswa
-        lm.update(lm.linearSearch("201235"), new Mahasiswa("201235", "Akhleema Lela", "021xx2"));
+        // lm.update(lm.linearSearch("201235"), new Mahasiswa("201235", "Akhleema Lela", "021xx2"));
+        lm.update(lm.binarySearch("201235"), new Mahasiswa("201235", "Akhleema Lela", "021xx2"));
         System.out.println("");
+        lm.tampil();
+
+        lm.sortASC();
+        lm.tampil();
+        System.out.println("");
+        lm.sortDESC();
         lm.tampil();
     }
 }

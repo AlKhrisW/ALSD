@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Stack;
 
@@ -10,18 +11,30 @@ public class LoopCollection {
         fruits.add("Leci");
         fruits.push("Salak");
 
+        fruits.set(fruits.size() - 1, "Strawberry");
+        
+        fruits.add("Mango");
+        fruits.add("Guava");
+        fruits.add("Avocado");
+
+        Collections.sort(fruits);
+        
+        
         for (String fruit : fruits) {
             System.out.printf("%s ", fruit);
         }
-
+        
         System.out.println("\n" + fruits.toString());
-
+        
         while (!fruits.empty()) {
             System.out.printf("%s ", fruits.pop());
         }
-
+        
         fruits.push("Melon");
         fruits.push("Durian");
+        
+        // fruits.set(fruits.size() - 1, "Strawberry");
+        
         System.out.println("");
         for (Iterator<String> it = fruits.iterator(); it.hasNext();) {
             String fruit = it.next();
